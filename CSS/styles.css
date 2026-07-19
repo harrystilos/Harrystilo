@@ -1,0 +1,256 @@
+:root {
+    --bg: #fbf9f6;
+    --white: #ffffff;
+    --text: #1c1612;
+    --text-light: #6d5f55;
+    --gold: #b89068;
+    --gold-soft: #d8b89a;
+    --border: #e8ddd2;
+    --shadow: 0 8px 25px rgba(0,0,0,.05);
+    --radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    color: var(--text);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: .3s;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: min(1200px, 92%);
+    margin: auto;
+    padding: 4rem 0;
+}
+
+/* MENÚ DE NAVEGACIÓN */
+nav {
+    background: var(--white);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+/* ENCABEZADO */
+header {
+    background: var(--white);
+    padding: 5rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 12px rgba(0,0,0,.03);
+}
+
+header h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 600;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: .6rem;
+}
+
+header p {
+    font-size: .9rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--gold);
+}
+
+/* INTRODUCCIÓN */
+.intro-section {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 4rem auto;
+}
+
+.intro-section h2 {
+    font-size: 2.6rem;
+    font-weight: 300;
+    font-style: italic;
+    color: #261f1a;
+    margin-bottom: 1.5rem;
+}
+
+.intro-section p {
+    font-size: 1.05rem;
+    color: #615349;
+}
+
+/* REJILLA DE FOTOS AUTOMÁTICA */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.portfolio-item {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(28, 22, 18, 0.06);
+}
+
+.image-container {
+    width: 100%;
+    border-radius: calc(var(--radius) - 4px);
+    overflow: hidden;
+    background-color: #f5f0eb;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 4 / 5;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover .image-container img {
+    transform: scale(1.04);
+}
+
+.info-container {
+    text-align: left;
+    padding: 5px 5px;
+}
+
+.item-title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #111111;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.item-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #bfa38f;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.item-description {
+    font-size: 0.85rem;
+    color: #706256;
+    line-height: 1.5;
+}
+
+/* BLOQUES DE NEGOCIO */
+.business-section {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 3rem 2rem;
+    border-radius: var(--radius);
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.investor-theme {
+    background: #1c1612; 
+    color: #ffffff;
+}
+
+.investor-theme h2 {
+    color: var(--gold-soft);
+    margin-bottom: 1rem;
+}
+
+.investor-theme p {
+    color: #a6978c; 
+    max-width: 600px; 
+    margin: 0 auto 1.5rem auto;
+}
+
+.investor-btn {
+    color: var(--gold-soft); 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    font-size: 0.85rem; 
+    letter-spacing: 1px;
+}
+
+/* WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.whatsapp-float:hover {
+    background-color: #20ba5a;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #a6978c;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    border-top: 1px solid #eae1d8;
+    margin-top: 6rem;
+}
