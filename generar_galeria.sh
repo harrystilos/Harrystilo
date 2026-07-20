@@ -59,3 +59,10 @@ rm "$TMP_GALERIA"
 echo "✅ ¡Cuadrícula actualizada con éxito en index.html!"
 
 
+# --- AUTOMATIZACIÓN DE GIT ---
+echo "🚀 Subiendo cambios automáticamente a GitHub..."
+git add .
+git commit -m "Automatizado: Actualización de galería $(date +'%d-%m-%Y %H:%M')"
+git push origin principal
+echo "🎉 ¡Todo listo! Tu web se está actualizando en internet."
+
