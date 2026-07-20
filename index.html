@@ -21,10 +21,31 @@
     </nav>
 
     <!-- ENCABEZADO -->
-    <header id="inicio">
-        <h1>Harry Stilos</h1>
-        <p>Alta Peluquería & Galería Editorial</p>
-    </header>
+    <header id="inicio" class="hero">
+
+    <div class="hero-overlay">
+
+        <h1>HARRY STILOS</h1>
+
+        <p class="hero-subtitle">
+            Transformamos tu imagen con técnicas profesionales de color, corte y alisado.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#reservas" class="hero-btn">
+                Reservar cita
+            </a>
+
+            <a href="#portafolio" class="hero-btn hero-btn-outline">
+                Ver portafolio
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
 
     <div class="container">
         
@@ -86,6 +107,37 @@
             </article>
 
         </section>
+        <!-- SECCIÓN DE RESERVAS -->
+<section id="reservas" class="business-section">
+    <h2>📅 Agenda tu cita</h2>
+    <p>Completa el siguiente formulario y recibiré tu solicitud directamente por WhatsApp.</p>
+
+    <form id="form-cita">
+        <input type="text" id="nombre" placeholder="Nombre completo" required>
+
+        <input type="tel" id="telefono" placeholder="Número de teléfono" required>
+
+        <select id="servicio" required>
+            <option value="">Selecciona un servicio</option>
+            <option>Corte</option>
+            <option>Color</option>
+            <option>Balayage</option>
+            <option>Alisado</option>
+            <option>Peinado</option>
+            <option>Tratamiento Capilar</option>
+        </select>
+
+        <input type="date" id="fecha" required>
+
+        <input type="time" id="hora" required>
+
+        <textarea id="comentarios" placeholder="Comentarios adicionales (opcional)"></textarea>
+
+        <button type="button" id="btn-reservar">
+            Reservar por WhatsApp
+        </button>
+    </form>
+</section>
 
         <!-- SECCIÓN DE PRODUCTOS -->
         <section id="productos" class="business-section">
