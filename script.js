@@ -49,10 +49,4 @@ imagenes.forEach(img => {
 
 cerrar.addEventListener("click", () => {
     lightbox.classList.remove("active");
-});
-
-lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) {
-        lightbox.classList.remove("active");
-    }
-});
+})
