@@ -87,6 +87,14 @@ header h1 {
     text-transform: uppercase;
     margin-bottom: .6rem;
 }
+header h2 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 400;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: .6rem;
+    color:white;
+}
 
 header p {
     font-size: .9rem;
